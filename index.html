@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DE SANTA - FISPQS DOS CLIENTES</title>
+  <title>DE SANTA - POLÍTICAS</title>
+
+<link rel="icon" type="image/x-icon" href="C:/Users/Jean Marques/Desktop/Nova pasta/logods.ico">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+
 
   <style>
     /* ===== Scrollbar global ===== */
@@ -35,16 +40,30 @@
       background: #eab308;
     }
   </style>
-
 </head>
-<body class="flex items-center justify-center min-h-screen bg-yellow-100 px-4">
-  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md text-center">
-    <h2 id="greeting" class="text-3xl font-semibold text-gray-800 mb-6"></h2>
-    <h1 class="text-2xl text-gray-800 mb-6">Escolha um dos clientes abaixo:</h1>
+<body class="flex flex-col min-h-screen bg-yellow-100 px-4">
 
-    <!-- Lista de clientes -->
-    <div id="clientesContainer" class="flex flex-col gap-4 max-h-80 overflow-y-auto pr-1"></div>
-  </div>
+  <!-- Cabeçalho com logo -->
+<header class="w-full flex items-center justify-start p-4">
+  <a href="https://www.desantalog.com.br" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="C:/Users/Jean Marques/Desktop/Nova pasta/logo.png" 
+      alt="Logo DE SANTA" 
+      class="h-5 md:h-8 lg:h-10 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+    />
+  </a>
+</header>
+
+  <!-- Conteúdo principal -->
+  <main class="flex flex-1 items-center justify-center px-4">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md text-center">
+      <h2 id="greeting" class="text-3xl font-semibold text-gray-800 mb-6"></h2>
+      <h1 class="text-2xl text-gray-800 mb-6">Selecione uma das políticas abaixo:</h1>
+
+      <!-- Lista de clientes -->
+      <div id="clientesContainer" class="flex flex-col gap-4 max-h-80 overflow-y-auto pr-1"></div>
+    </div>
+  </main>
 
   <!-- Modal Cliente -->
   <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/60 z-50">
@@ -53,7 +72,6 @@
         <h3 id="clienteNome" class="text-lg font-semibold"></h3>
         <button onclick="fecharModal()" aria-label="Fechar"
         class="text-red-500 text-xl font-bold px-3 py-1 rounded-full transition">✖</button>
-
       </div>
 
       <!-- Busca -->
@@ -66,35 +84,34 @@
     </div>
   </div>
 
-<!-- Modal PDF em tela cheia -->
-<div id="pdfModal" class="hidden fixed inset-0 z-50 bg-black">
-  <button onclick="fecharPDFModal()" 
-    class="absolute top-4 right-4 w-12 h-12 bg-red-500 hover:bg-red-600 text-white text-2xl rounded-lg shadow z-50">
-    X
-  </button>
-  <iframe id="pdfFrame" class="w-full h-full border-0"></iframe>
-</div>
-
+  <!-- Modal PDF em tela cheia -->
+  <div id="pdfModal" class="hidden fixed inset-0 z-50 bg-black">
+    <button onclick="fecharPDFModal()" 
+      class="absolute top-4 right-4 w-12 h-12 bg-red-500 hover:bg-red-600 text-white text-2xl rounded-lg shadow z-50">
+      X
+    </button>
+    <iframe id="pdfFrame" class="w-full h-full border-0"></iframe>
+  </div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>
 
-<footer style="
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  color: #FFD700; /* amarelo */
-  background: transparent;
-  padding: 8px 0;
-">
-  <a href="mailto:jean.marques@desantalog.com.br" style="text-decoration: none; color: #FFD700;">
-    Desenvolvedor Jean Marques<span style="font-size:10px; vertical-align:super;">®</span>
-  </a>
-</footer>
-  
+  <!-- Footer -->
+  <footer style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #FFD700;
+    background: transparent;
+    padding: 8px 0;
+  ">
+    <a href="mailto:jean.marques@desantalog.com.br" style="text-decoration: none; color: #FFD700;">
+      Desenvolvedor Jean Marques<span style="font-size:10px; vertical-align:super;">®</span>
+    </a>
+  </footer>
+
 </body>
 </html>
-
